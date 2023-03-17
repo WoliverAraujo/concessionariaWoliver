@@ -1,6 +1,17 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Venda extends Concessionaria {
+
+	public Venda{
+	    private ArrayList<Carro> carros = new ArrayList<>();
+	    private ArrayList<Carro> carrosVendidos = new ArrayList<>();
+
+	    public void cadastrarCarro(Carro carro) {
+	        carros.add(carro);
+	    }
+
+	}
 
 	public void venderCarro(Carro carro, Cliente cliente, double precoVenda) {
 	    // Verifica se o carro está disponível para venda
