@@ -1,41 +1,37 @@
-
 public abstract class Carro {
-	private String placa;
+    private String marca;
     private String modelo;
     private int ano;
-    private String fabricante;
-    private double preco;
 
-    public Carro(String placa, String modelo, int ano, String fabricante, double preco) {
-        this.placa = placa;
+    public Carro(String marca, String modelo, int ano) {
+        this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
-        this.fabricante = fabricante;
-        this.preco = preco;
     }
 
-    public String getPlaca() {
-        return placa;
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getModelo() {
         return modelo;
     }
 
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
     public int getAno() {
         return ano;
     }
 
-    public String getFabricante() {
-        return fabricante;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
-    public double getPreco() {
-        return preco;
-    }
-
-    @Override
-    public String toString() {
-        return "Placa: " + placa + ", Modelo: " + modelo + ", Ano: " + ano + ", Fabricante: " + fabricante + ", Preço: " + preco;
-    }
+    public abstract void imprimirInformacoes();
 }
