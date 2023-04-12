@@ -1,3 +1,4 @@
+
 public class Venda {
     private Concessionaria concessionaria;
     private Carro carro;
