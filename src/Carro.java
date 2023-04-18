@@ -1,15 +1,17 @@
-
 public abstract class Carro {
     private String marca;
     private String modelo;
-    private int ano;
+    private int anoFabricacao;
+    private double valor;
 
-    public Carro(String marca, String modelo, int ano) {
+    public Carro(String marca, String modelo, int anoFabricacao, double valor) {
         this.marca = marca;
         this.modelo = modelo;
-        this.ano = ano;
+        this.anoFabricacao = anoFabricacao;
+        this.valor = valor;
     }
 
+    // Métodos getters e setters
     public String getMarca() {
         return marca;
     }
@@ -26,13 +28,19 @@ public abstract class Carro {
         this.modelo = modelo;
     }
 
-    public int getAno() {
-        return ano;
+    public int getAnoFabricacao() {
+        return anoFabricacao;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
+    public void setAnoFabricacao(int anoFabricacao) {
+        this.anoFabricacao = anoFabricacao;
     }
 
-    public abstract void imprimirInformacoes();
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
 }

@@ -1,9 +1,12 @@
 
 public class CarroUsado extends Carro {
     private int quilometragem;
+	private double valor;
+	private int ano;
 
-    public CarroUsado(String marca, String modelo, int ano, int quilometragem) {
-        super(marca, modelo, ano);
+    public CarroUsado(String marca, String modelo, int ano, double valor, int quilometragem) {
+        super(marca, modelo, ano, valor);
+        this.valor = valor;
         this.quilometragem = quilometragem;
     }
 
@@ -14,13 +17,23 @@ public class CarroUsado extends Carro {
     public void setQuilometragem(int quilometragem) {
         this.quilometragem = quilometragem;
     }
-
-    @Override
-    public void imprimirInformacoes() {
-        System.out.println("Carro Usado:");
-        System.out.println("Marca: " + getMarca());
-        System.out.println("Modelo: " + getModelo());
-        System.out.println("Ano: " + getAno());
-        System.out.println("Quilometragem: " + getQuilometragem());
+    
+    public int getAno() {
+        return ano;
     }
+
+    public void vender() {
+				
+	}
+    
+    public void informacoes() {
+        System.out.println("Marca: " + this.getMarca());
+        System.out.println("Modelo: " + this.getModelo());
+        System.out.println("Ano: " + this.getAno());
+        System.out.println("Valor: R$" + this.valor);
+        System.out.println("Quilometragem rodada: " + this.quilometragem + " km");
+        System.out.println("---");
+    }
+
+	
 }
